@@ -1,0 +1,31 @@
+//------------------------------
+//テキストエリア
+//------------------------------
+
+.f-textarea {
+	-webkit-appearance: none;
+	appearance: none;
+	resize: none;
+	border: 1px solid #ccc;
+	padding: 15px;
+	background: #fff;
+	margin-left: 0;
+	background: #fff;
+	width: 100%;
+	max-width: 100%;
+	outline: none;
+	text-align: left;
+	font-size: 1.6rem;
+	border-radius: 20px;
+}
+
+//------------------------------
+//高さ
+//------------------------------
+
+@for $i from 1 through 6 {
+	$j: $i * 50;
+	.h-#{$j} {
+		height: #{$j}px !important;
+	}
+}

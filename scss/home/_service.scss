@@ -1,0 +1,72 @@
+//------------------------------
+//カラム
+//------------------------------
+
+.h-serviceCol {
+	max-width: $width;
+	display: flex;
+	gap: 20px;
+	margin-bottom: 70px;
+	&__item {
+		flex-basis: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.h-serviceCol {
+		flex-wrap: wrap;
+		gap: 40px;
+		&__item {
+			flex-basis: 100%;
+		}
+	}
+}
+
+//------------------------------
+//メッセージ
+//------------------------------
+
+.h-serviceMes {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 2px;
+	line-height: 1.8;
+	padding: 0 0 40px 20px;
+}
+
+@media (max-width: 500px) {
+	.h-serviceMes {
+		font-size: 2.2rem;
+		padding: 0 0 40px 0;
+		text-align: center;
+	}
+}
+
+//------------------------------
+//ボックス
+//------------------------------
+
+.h-serviceBox {
+	padding: 15px 30px;
+	background: #fff;
+	max-width: 400px;
+	margin-top: -20px;
+	position: relative;
+	z-index: 1;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+	&__logo {
+		margin: 0 auto 13px;
+		text-align: center;
+	}
+	&__desc {
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+}
+
+@media (max-width: 470px) {
+	.h-serviceBox {
+		padding: 15px 15px;
+		margin: -15px 15px 0;
+	}
+}

@@ -1,0 +1,25 @@
+//------------------------------
+//アイキャッチ
+//------------------------------
+
+.eyecatch {
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	&__img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.eyecatch {
+		height: auto;
+		padding-top: 80%;
+	}
+}

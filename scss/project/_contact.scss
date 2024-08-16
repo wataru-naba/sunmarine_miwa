@@ -1,0 +1,79 @@
+//------------------------------
+//お問い合わせ
+//------------------------------
+
+.formBox {
+	background: #fafafa;
+	padding: 15px 30px 30px;
+	margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+	.formBox {
+		padding: 20px 20px 30px;
+		margin: -35px -20px 30px;
+	}
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	&__name {
+		flex-basis: 180px;
+		font-weight: 400;
+		padding: 15px 0;
+		border-bottom: 1px solid #fff;
+		line-height: 40px;
+		&:last-of-type {
+			border-bottom: 0;
+		}
+	}
+	&__input {
+		flex-basis: calc(100% - 180px);
+		padding: 15px 0;
+		border-bottom: 1px solid #fff;
+		&:last-of-type {
+			border-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.form {
+		&__name {
+			flex-basis: 100%;
+			line-height: 1;
+			padding: 20px 0 0 10px;
+			border-bottom: 0;
+		}
+		&__input {
+			flex-basis: 100%;
+			padding: 15px 0 20px;
+		}
+	}
+}
+
+//------------------------------
+//個人情報
+//------------------------------
+
+.privacy {
+	border: 1px solid #ccc;
+	padding: 20px;
+	background: #fff;
+	margin-bottom: 20px;
+	&__inner {
+		height: 100px;
+		overflow-y: scroll;
+		padding-right: 10px;
+	}
+	&__title {
+		margin-bottom: 15px;
+		font-size: 1.5rem;
+	}
+	&__cnt {
+		font-size: 1.4rem;
+		line-height: 1.6;
+	}
+}

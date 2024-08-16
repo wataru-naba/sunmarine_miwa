@@ -1,0 +1,37 @@
+//------------------------------
+//お問い合わせ
+//------------------------------
+
+.contact {
+	text-align: center;
+	padding: 30px 20px 0;
+	&__desc {
+		font-size: 1.4rem;
+		line-height: 1.6;
+		margin-bottom: 10px;
+	}
+	&__tel {
+		display: flex;
+		width: fit-content;
+		width: -moz-fit-content;
+		align-items: center;
+		font-size: 2.8rem;
+		margin-bottom: 10px;
+		letter-spacing: 1px;
+		img {
+			margin-right: 10px;
+		}
+	}
+	&__time {
+		background: $color_orange;
+		color: #fff;
+		width: fit-content;
+		width: -moz-fit-content;
+		padding: 5px 15px;
+		font-size: 1.5rem;
+	}
+	&__address {
+		font-size: 1.4rem;
+		margin-top: 10px;
+	}
+}

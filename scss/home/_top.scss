@@ -1,0 +1,14 @@
+//------------------------------
+//背景
+//------------------------------
+
+.h-contents {
+	background: $color_beige;
+	padding: 70px 20px;
+}
+
+@media (max-width: 767px) {
+	.h-contents {
+		padding: 40px 20px;
+	}
+}

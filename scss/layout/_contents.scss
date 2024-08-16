@@ -1,0 +1,14 @@
+//------------------------------
+//コンテンツ
+//------------------------------
+
+.contents {
+	max-width: calc($width + 40px);
+	padding: 60px 20px;
+}
+
+@media (max-width: 767px) {
+	.contents {
+		padding: 40px 20px;
+	}
+}

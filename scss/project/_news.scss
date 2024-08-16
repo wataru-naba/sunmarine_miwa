@@ -1,0 +1,143 @@
+//------------------------------
+//リスト
+//------------------------------
+
+@media (max-width: 767px) {
+	.newsList {
+		li {
+			border-bottom: 1px solid #eee;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+//------------------------------
+//ボックス
+//------------------------------
+
+.newsListBox {
+	display: flex;
+	padding: 15px 0;
+	&__date {
+		flex-basis: 160px;
+		padding: 5px 0;
+	}
+	&__cat {
+		flex-basis: 150px;
+	}
+	&__title {
+		padding: 0 0 0 35px;
+		line-height: 1.5;
+		flex-basis: calc(100% - 310px);
+		transition: 0.3s;
+	}
+}
+
+.newsListBox:hover {
+	.newsListBox__title {
+		color: $color_purple;
+	}
+}
+
+@media (max-width: 767px) {
+	.newsListBox {
+		flex-wrap: wrap;
+		padding: 20px 0;
+		&__date {
+			font-size: 1.4rem;
+			flex-basis: 120px;
+		}
+		&__cat {
+			flex-basis: 100px;
+		}
+		&__title {
+			flex-basis: 100%;
+			padding: 7px 0 0 0;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+//------------------------------
+//カテゴリー
+//------------------------------
+
+.newsCat {
+	display: block;
+	background: #000;
+	color: #fff;
+	font-size: 1.3rem;
+	text-align: center;
+	padding: 7px 0;
+	//カラー
+	&--notice {
+		background: $color_green;
+	}
+}
+
+@media (max-width: 767px) {
+	.newsCat {
+		font-size: 1.1rem;
+		padding: 5px 0;
+	}
+}
+
+//------------------------------
+//詳細ページ
+//------------------------------
+
+.newsBlock {
+	padding: 130px 20px 50px 20px;
+	max-width: $width;
+
+}
+
+//------------------------------
+//タイトル
+//------------------------------
+
+.newsTitle {
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+	padding: 30px 200px 30px 10px;
+	font-weight: 400;
+	font-size: 1.9rem;
+	position: relative;
+	margin-bottom: 50px;
+	line-height: 1.5;
+	&__cat {
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		transform: translateY(-50%);
+		width: 150px;
+		display: block;
+	}
+}
+
+@media (max-width: 767px) {
+	.newsTitle {
+		padding: 30px 0 30px;
+		&__cat {
+			position: static;
+			transform: translateY(0);
+			margin: 10px 0 0 auto;
+		}
+	}
+}
+
+//------------------------------
+//本文
+//------------------------------
+
+.newsBody {
+	max-width: 800px;
+	line-height: 1.8;
+	padding-bottom: 100px;
+	display: flow-root;
+	p {
+		margin-bottom: 20px;
+	}
+}

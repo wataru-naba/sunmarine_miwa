@@ -1,0 +1,78 @@
+//------------------------------
+//ナビボタン外枠
+//------------------------------
+
+.navb-wrap {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	display: none;
+}
+
+//------------------------------
+//ナビボタン外枠
+//------------------------------
+
+.navb {
+	height: 60px;
+	width: 60px;
+	background: none;
+	z-index: 2;
+	align-items: center;
+	cursor: pointer;
+	transition: background 0.3s;
+	display: flex;
+	border-radius: 30px;
+	&.active {
+		background: #fff;
+	}
+}
+
+//------------------------------
+//ナビボタン
+//------------------------------
+
+.navb-inner {
+	position: relative;
+	width: 30px;
+	.navb-bar {
+		display: block;
+		height: 2px;
+		background: $color_purple;
+		transition: 0.3s;
+		&1 {
+			margin-bottom: 7px;
+		}
+		&2 {
+			margin-bottom: 7px;
+		}
+	}
+	.navb-name {
+		display: block;
+		text-align: center;
+		color: $color_purple;
+		font-size: 1rem;
+		margin-top: 5px;
+	}
+}
+
+.navb.active {
+	.navb-bar {
+		&1 {
+			transform: translateY(9px) rotate(40deg);
+		}
+		&2 {
+			transform: translateX(6px);
+			opacity: 0;
+		}
+		&3 {
+			transform: translateY(-9px) rotate(-40deg);
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.navb-wrap {
+		display: block;
+	}
+}

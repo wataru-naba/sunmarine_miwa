@@ -1,0 +1,21 @@
+//------------------------------
+//カラム
+//------------------------------
+
+.h-infoCol {
+	max-width: $width;
+	display: flex;
+	gap: 40px;
+	&__item {
+		flex-basis: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.h-infoCol {
+		flex-wrap: wrap;
+		&__item {
+			flex-basis: 100%;
+		}
+	}
+}

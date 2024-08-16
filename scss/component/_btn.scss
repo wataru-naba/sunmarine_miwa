@@ -1,0 +1,32 @@
+//------------------------------
+//ボタン1
+//------------------------------
+
+.btn1 {
+	background: $color_purple;
+	color: #fff;
+	display: block;
+	text-align: center;
+	width: 200px;
+	margin: 0 auto;
+	padding: 15px 0;
+	position: relative;
+	i {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&-l {
+		i {
+			left: 10px;
+		}
+	}
+	&-r {
+		i {
+			right: 10px;
+		}
+	}
+	&:hover {
+		background: $color_purple_light;
+	}
+}

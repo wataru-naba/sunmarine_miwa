@@ -1,0 +1,46 @@
+//------------------------------
+//ページの先頭
+//------------------------------
+
+.pagetop {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 2;
+	display: none;
+	&_inner {
+		width: 70px;
+		height: 70px;
+		background: $color_purple;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: 0.3s;
+		padding-bottom: 5px;
+		justify-content: center;
+		i {
+			color: #fff;
+			font-size: 2rem;
+		}
+	}
+}
+
+.pagetop_inner:hover {
+	background: $color_purple_light;
+}
+
+@media (max-width: 767px) {
+	.pagetop {
+		bottom: 20px;
+		right: 20px;
+		&_inner {
+			width: 50px;
+			height: 50px;
+			i {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}

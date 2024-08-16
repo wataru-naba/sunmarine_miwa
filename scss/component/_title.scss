@@ -1,0 +1,86 @@
+//------------------------------
+//タイトル1
+//------------------------------
+
+.t1 {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 2px;
+	background: $color_orange_light;
+	width: 300px;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 40px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: -80px;
+	position: relative;
+	z-index: 1;
+	&:after {
+		content: "";
+		width: 100vw;
+		height: 50px;
+		background: $color_orange_light;
+		position: absolute;
+		bottom: -10px;
+		left: calc((50vw - 150px) * -1);
+		z-index: -1;
+	}
+}
+
+@media (max-width: 500px) {
+	.t1 {
+		font-size: 2.2rem;
+		width: 250px;
+		height: 60px;
+		line-height: 60px;
+		border-radius: 30px;
+		margin-top: -65px;
+		&:after {
+			left: calc((50vw - 125px) * -1);
+			height: 35px;
+			bottom: -5px;
+		}
+	}
+}
+
+//------------------------------
+//タイトル2
+//------------------------------
+
+.t2 {
+	max-width: 300px;
+	color: $color_purple;
+	font-size: 1.8rem;
+	padding: 10px 20px;
+	border-left: 1px solid $color_purple;
+	border-right: 1px solid $color_purple;
+	margin-bottom: 40px;
+	margin-top: 70px;
+	&__en {
+		display: block;
+		color: $color_orange;
+		font-size: 1.4rem;
+		margin-top: 12px;
+	}
+	&--right {
+		margin-right: 0;
+		margin-left: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.t2 {
+		margin-bottom: 30px;
+		&--right {
+			margin-right: auto;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.t2 {
+		max-width: 100%;
+	}
+}

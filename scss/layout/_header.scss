@@ -1,0 +1,62 @@
+//------------------------------
+//外枠
+//------------------------------
+
+.headerWrap {
+	padding: 15px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+@media (max-width: 1023px) {
+	.headerWrap {
+		padding: 15px;
+	}
+}
+
+//------------------------------
+//ヘッダー
+//------------------------------
+
+.header {
+	max-width: calc($width + 100px);
+	height: 80px;
+	background: #fff;
+	border-radius: 40px;
+	position: relative;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+	&__logo {
+		font-size: 1.5rem;
+		position: absolute;
+		top: 50%;
+		left: 50px;
+		transform: translateY(-50%);
+		width: 270px;
+	}
+	&__nav {
+		position: absolute;
+		top: 50%;
+		right: 50px;
+		transform: translateY(-50%);
+	}
+}
+
+@media (max-width: 1023px) {
+	.header {
+		height: 60px;
+		&__logo {
+			left: 20px;
+			width: 230px;
+		}
+		&__nav {
+			top: 80px;
+			right: 0;
+			transform: translateY(0);
+			width: 100%;
+			display: none;
+		}
+	}
+}
