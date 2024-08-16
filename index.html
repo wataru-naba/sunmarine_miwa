@@ -6,6 +6,8 @@
 <meta name="format-detection" content="telephone=no">
 <title>サンマリン日向</title>
 <link rel="stylesheet" href="./css/style.css?1">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 </head>
 <body>
 
@@ -35,8 +37,16 @@
 </header>
 
 <div class="eyecatch">
-	<img src="./images/top_main.jpg" class="eyecatch__img">
+	<div class="slider">
+		<figure><img src="./images/slide01.jpg" ></figure>
+		<figure><img src="./images/slide03.jpg" ></figure>
+		<figure><img src="./images/slide02.jpg" ></figure>
+	</div>
+	<div class="pn top-prev"><img src="./images/prev_btn_off.png"></div>
+	<div class="pn top-next"><img src="./images/next_btn_off.png?2"></div>
 </div>
+
+
 
 <section class="h-newsBlock">
 	<div class="h-news">
@@ -85,7 +95,7 @@
 		<img src="./images/view1.jpg" alt="施設からの展望1">
 	</div>
 	<div class="h-viewCol__item">
-		<h2 class="t2 t2--right mt-0">施設からの展望<span class="t2__en">View</span></h2>
+		<h2 class="t2 t2--right mt-0">施設の展望<span class="t2__en">View</span></h2>
 		<img src="./images/view2.jpg" alt="施設からの展望2">
 	</div>
 </div>
@@ -142,7 +152,29 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="./js/script.js"></script>
-
+<script>
+	$('.slider').slick({
+		fade:true,
+		autoplay:true,
+		arrows:true,
+		autoplaySpeed:6000,
+		speed:1000,
+		pauseOnFocus:false,
+		pauseOnHover:false,
+		pauseOnDotsHover:false,
+		prevArrow:'.top-prev',
+		nextArrow:'.top-next',
+		swipe:true,
+		cssEase:'ease-out',
+		useCSS:true,
+		dots:false,
+		centerPadding:0,
+		centerMode: true,
+		centerPadding: 0,
+		pauseOnHover: false
+	});
+</script>
 </body>
 </html>

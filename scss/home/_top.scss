@@ -12,3 +12,17 @@
 		padding: 40px 20px;
 	}
 }
+
+.pn{position:absolute;top:50%;margin-top:-23.5px;cursor:pointer;height:48px;width:36px;z-index: 2;}
+.pn img{width:100%;height:auto;transition:0.3s;}
+.pn.top-prev{left: 10px;}
+.pn.top-next{right:10px;text-align:right;}
+.pn:hover img{filter: drop-shadow(0 0 5px #1b96d5);}
+
+.slider{
+	figure{
+		img{width: 100%;}
+		transform: translateY(-25%);
+		object-fit: cover;
+	}
+}
