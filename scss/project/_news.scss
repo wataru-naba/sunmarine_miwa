@@ -140,4 +140,10 @@
 	p {
 		margin-bottom: 20px;
 	}
+	a{
+		color: $color_red;
+		&:hover{
+			color: $color_orange_dark;
+		}
+	}
 }
