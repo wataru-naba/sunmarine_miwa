@@ -67,7 +67,11 @@
 		margin-right: 0;
 		margin-left: auto;
 	}
+	&.long{
+		max-width: 100%;
+	}
 }
+
 
 @media (max-width: 767px) {
 	.t2 {
