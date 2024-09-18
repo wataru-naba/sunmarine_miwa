@@ -777,7 +777,15 @@ h1, h2, h3, h4, h5, h6, strong, b, em, th, dt {
   transform: translate(-50%, -50%);
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
+}
+.eyecatch__img.shisetsu {
+  object-fit: contain;
+  transform: translate(-50%, -40%);
+}
+.eyecatch__img.contact {
+  object-fit: contain;
+  transform: translate(-50%, -40%);
 }
 
 @media (max-width: 767px) {
