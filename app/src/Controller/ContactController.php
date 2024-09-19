@@ -12,7 +12,7 @@ class ContactController extends AppController
 
     public function index()
     {
-
+        $this->viewBuilder()->disableAutoLayout('');
         //フォームクラスを生成
         $contact = new ContactForm();
         $this->set('contact', $contact);

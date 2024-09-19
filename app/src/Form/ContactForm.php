@@ -13,7 +13,6 @@ class ContactForm extends Form{
     protected function _buildSchema(Schema $schema): Schema
     {
         return $schema->addField('name', 'string')
-                ->addField('furigana', ['type' => 'string'])
                 ->addField('email', ['type' => 'string'])
                 ->addField('tel', ['type' => 'string'])
                 ->addField('info', ['type' => 'textarea']);
@@ -35,14 +34,13 @@ class ContactForm extends Form{
 		
 		Configure::load('company');
 
-		$body = $data['name1'].'様'."<br/>";
+		$body = $data['name'].'様'."<br/>";
 
 		$body .='この度はお問い合わせありがとうございます。'."<br/>".'下記の内容でのお問い合わせを行いました'."<br/><br/>";
 		$body .= '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'."<br/>";
 		$body .= '■ お問い合わせ内容 ■'."<br/>";
 		$body .= '───────────────────────────────────'."<br/>";
-        $body .= 'お問い合わせ種別：'.$data['category']."<br/>";
-		$body .= '氏名：'.$data['name1'].' '.$data['name2']."<br/>";;
+		$body .= '氏名：'.$data['name']."<br/>";;
 		$body .= 'メールアドレス：'.$data['email']."<br/>";
 		$body .= '電話番号：'.$data['tel']."<br/><br/>";
 		$body .= '---お問い合わせ内容---'."<br/>";
@@ -63,17 +61,18 @@ class ContactForm extends Form{
 		// メールを送信する
 		$email = new Email('default');
 		$email->setEmailFormat('both')
-        		->setFrom(Configure::read('email'),Configure::read('name'))
+        		->setFrom(Configure::read('return_email'),Configure::read('name'))
         		->setTo($data['email'])
+				->setReturnPath(Configure::read('return_email'))
         		->setSubject('お問い合わせメール-控え- '.Configure::read('name'))
         		->send($body);
 
 		$email = new Email('default');
 		$email->setEmailFormat('both')
-        		->setFrom(Configure::read('email'),Configure::read('name'))
+        		->setFrom(Configure::read('return_email'),Configure::read('name'))
         		->setTo(Configure::read('email'))
         		->setBcc('wataru@hyuga.jp')
-        		->setSubject($data['name1'].'様よりお問い合わせメールが届いています | '.Configure::read('name'))
+        		->setSubject($data['name'].'様よりお問い合わせメールが届いています | '.Configure::read('name'))
         		->send($body);
 
 		return true;	

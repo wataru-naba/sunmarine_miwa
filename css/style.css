@@ -1315,6 +1315,8 @@ h1, h2, h3, h4, h5, h6, strong, b, em, th, dt {
   flex-basis: calc(100% - 180px);
   padding: 15px 0;
   border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
 }
 .form__input:last-of-type {
   border-bottom: 0;
